@@ -7,3 +7,9 @@ on:
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      build_matrix: |
+        [
+          {"board": "nice_nano_v2", "shield": "corne_left"},
+          {"board": "nice_nano_v2", "shield": "corne_right"}
+        ]
